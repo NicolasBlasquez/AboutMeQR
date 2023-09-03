@@ -1,23 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Blasquez</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+        ::-webkit-scrollbar {
+            background-color: var(--primary);
+            width: 0.8vw
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--secondary);
+            border-radius: 1rem;
+        }
+
+        :root {
+            --primary: #0e0e0e;
+            --secondary: #020202;
+            --ternary: #2c2c2c;
+            --white: #b6b8bd;
+        }
+
+        * {
+            outline: none;
+            color: var(--white);
+            font-family: Roboto;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        html {
+            image-rendering: pixelated;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: black;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            padding-top: 1vw;
+            flex-direction: column;
+            align-items: center;
+
+            & .profile {
+                width: 15rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+            }
+        }
+
+        main {
+            padding: 5vw;
+
+            & .grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+                padding: 0;
+
+                & li {
+                    display: flex;
+                    justify-content: center;
+                    border-radius: 0.5rem;
+                    align-items: center;
+                    border: var(--ternary) solid 1px;
+                    aspect-ratio: 16/9;
+                    background-color: var(--secondary);
+                    background-image: radial-gradient(circle, var(--ternary) 1px, rgba(0, 0, 0, 0) 1px);
+                    background-size: 1rem 1rem;
+                }
+
+                & .icon {
+                    height: 55%;
+                }
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
     </style>
 </head>
-<body>
-    <header>
 
-    </header>
+<body>
     <main>
+        <header>
+            <img src="Assets/profile.jpg" class="profile">
+            <h1>Nicolas Blasquez</h1>
+            <div>
+                <p>💻 Soy amante de la Tecnología y programador Front-End<br>🌱 Me encanta la naturaleza y hacer deporte
+                    💪<br>✨️ Cosas que me gustan: 🍂 Otoño, ☕️ Café, 🐱 Gatos, 🪢 Scoutismo, 🎧 Escuchar Música</p>
+            </div>
+        </header>
         <section>
             <h1>Redes sociales:</h1>
-            <ul>
-                <li><a href="https://www.instagram.com/nick._x3/">Instagram</a></li>
-                <li><a href="https://twitter.com/NicolasBla5quez">Twitter</a></li>
+            <ul class="grid">
+                <a href="https://www.instagram.com/nick._x3/" target="_blank">
+                    <li><img src="Assets/instagram.svg" class="icon"></li>
+                </a>
+                <a href="https://twitter.com/NicolasBla5quez" target="_blank">
+                    <li><img src="Assets/twitter.svg" class="icon"></li>
+                </a>
+                <a href="https://github.com/NicolasBlasquez" target="_blank">
+                    <li><img src="Assets/github.svg" class="icon"></li>
+                </a>
+                <a href="https://stackoverflow.com/users/16148585/nick" target="_blank">
+                    <li><img src="Assets/stackoverflow.svg" class="icon"></li>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=543525483334" target="_blank">
+                    <li><img src="Assets/whatsapp.svg" class="icon"></li>
+                </a>
+                <a href="https://discordapp.com/users/nickx3" target="_blank">
+                    <li><img src="Assets/discord.svg" class="icon"></li>
+                </a>
             </ul>
         </section>
     </main>
@@ -25,4 +133,5 @@
 
     </footer>
 </body>
+
 </html>
