@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Blasquez</title>
+    <link rel="shortcut icon" href="Assets/QR.svg" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
@@ -19,15 +20,17 @@
         }
 
         :root {
-            --primary: #0e0e0e;
-            --secondary: #020202;
-            --ternary: #2c2c2c;
-            --white: #b6b8bd;
+            --primary: #ffffff;
+            --secondary: #f0f0f0;
+            --ternary: #dadada;
+            --bright: #b6b6b6;
+            --font: #3b3b3b;
+            --color1: #3eb74e;
         }
 
         * {
             outline: none;
-            color: var(--white);
+            color: var(--font);
             font-family: Roboto;
             text-decoration: none;
             list-style: none;
@@ -39,7 +42,7 @@
         }
 
         body {
-            background-color: black;
+            background-color: var(--primary);
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -81,9 +84,10 @@
             align-items: center;
             border: var(--ternary) solid 1px;
             aspect-ratio: 16/9;
-            background-color: var(--secondary);
+            background-color: var(--primary);
             background-image: radial-gradient(circle, var(--ternary) 1px, rgba(0, 0, 0, 0) 1px);
             background-size: 1rem 1rem;
+            background-position: center;
         }
 
         .grid .icon {
@@ -94,6 +98,16 @@
 
             .grid {
                 grid-template-columns: 1fr 1fr !important;
+            }
+        }
+
+        @media(prefers-color-scheme: dark) {
+            :root {
+                --primary: #111111;
+                --secondary: #1c1c1c;
+                --ternary: #2B2B35;
+                --font: #C9CAD0;
+                --color1: #207f2c;
             }
         }
     </style>
@@ -113,6 +127,9 @@
         <section>
             <h1>Redes sociales:</h1>
             <ul class="grid">
+                <a href="https://nicolasblasquez.github.io" target="_blank">
+                    <li><img src="Assets/suitcase.svg" class="icon"></li>
+                </a>
                 <a href="https://www.instagram.com/nick._x3/" target="_blank">
                     <li><img src="Assets/instagram.svg" class="icon"></li>
                 </a>
@@ -128,9 +145,6 @@
                 </a>
                 <a href="https://github.com/NicolasBlasquez" target="_blank">
                     <li><img src="Assets/github.svg" class="icon"></li>
-                </a>
-                <a href="https://stackoverflow.com/users/16148585/nick" target="_blank">
-                    <li><img src="Assets/stackoverflow.svg" class="icon"></li>
                 </a>
             </ul>
         </section>
